@@ -5,7 +5,7 @@ def ler_arquivo_cliente(nome_arquivo):
     with open(nome_arquivo, mode='r', encoding='utf-8') as file:
         leitor = csv.reader(file, delimiter=';')
         for linha in leitor:
-            if len(linha) < 4:  # Ignorar linhas mal formatadas ou vazias
+            if len(linha) < 4:  
                 continue
             cliente = {
                 'nome': linha[0],
